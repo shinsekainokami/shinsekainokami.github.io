@@ -3,15 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <title>Bistro restaurant</title>
-        <meta
-            name="description"
-            content="Enjoy Classic English Breakfast & More | Casual outpost offering traditional morning fare alongside wraps, pizza & sandwiches."
+        <title>Traveler</title>
+        <meta name="description" content="" />
+        <link
+            rel="shortcut icon"
+            href="./assets/logo/logo.png"
+            type="image/x-icon"
         />
-
-        <meta name="twitter:title" content="Bistro restaurant" />
-        <meta name="twitter:description" content=" Bistro" />
 
         <!-- Open Graph / Facebook -->
         <meta property="og:title" content="Title of the project" />
@@ -21,19 +19,9 @@
         <!--Replace with the current website url-->
         <meta property="og:image" content="" />
 
-        <link
-            rel="shortcut icon"
-            href="./assets/bistro.png"
-            type="image/x-icon"
-        />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
-        />
-
-        <!-- <link rel="stylesheet" href="./css/tailwind-runtime.css"> -->
-        <link rel="stylesheet" href="./css/tailwind-build.css" />
-        <link rel="stylesheet" href="./css/index.css" />
+        <!-- <link rel="stylesheet" href="./css/tailwind-runtime.css" /> -->
+        <link rel="stylesheet" href="./css/tailwind-build.css">
+        <link rel="stylesheet" href="css/index.css" />
 
         <link
             rel="stylesheet"
@@ -43,588 +31,644 @@
             referrerpolicy="no-referrer"
         />
     </head>
-
     <body
-        class="tw-flex tw-min-h-[100vh] tw-w-full tw-flex-col tw-bg-[#ffffff]"
+        class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-white tw-text-black"
     >
         <header
-            class="tw-fixed tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-px-[10%] max-md:tw-mr-auto md:tw-justify-around"
+            class="tw-max-w-lg:tw-px-4 tw-max-w-lg:tw-mr-auto tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] lg:tw-justify-around"
         >
-            <div
-                class="tw-absolute tw-left-0 tw-top-0 tw-z-[-1] tw-h-0 tw-w-full tw-bg-white tw-shadow-lg"
-                id="expanding-header-bg"
-            >
-                <!-- expands the white background as scroll -->
-            </div>
-
-            <div class="tw-h-[50px] tw-w-[150px] tw-p-[4px]">
+            <a class="tw-h-[50px] tw-w-[50px] tw-p-[4px]" href="">
                 <img
-                    src="./assets/bistro.svg"
+                    src="./assets/logo/logo.png"
                     alt="logo"
                     class="tw-object tw-h-full tw-w-full"
                 />
-            </div>
+            </a>
             <div
-                class="collapsible-header animated-collapse"
-                id="collapsed-items"
+                class="collapsible-header animated-collapse max-lg:tw-shadow-md"
+                id="collapsed-header-items"
             >
                 <div
-                    class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-white max-md:tw-mt-[30px] max-md:tw-flex-col max-md:tw-place-items-end max-md:tw-gap-5 md:tw-mx-auto md:tw-place-items-center"
+                    class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center"
                 >
                     <a class="header-links" href=""> About us </a>
-                    <a class="header-links" href=""> Menus </a>
-                    <a class="header-links" href=""> Contact us </a>
-                    <a
-                        class="header-links"
-                        href=""
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Order online
-                    </a>
+                    <a class="header-links" href="#pricing"> Pricing </a>
+                    <a class="header-links" href=""> Solutions </a>
+                    <a class="header-links" href=""> Features </a>
+                    <a class="header-links" href=""> Company </a>
                 </div>
                 <div
-                    class="tw-flex tw-place-items-center tw-gap-[20px] tw-text-xl max-md:tw-w-full max-md:tw-place-content-center max-md:!tw-text-white"
+                    class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center"
                 >
                     <a
-                        href="https://www.facebook.com/"
-                        target="_blank"
-                        rel="no-referrer"
-                        area-label="facebook"
-                        class="header-links tw-transition-colors tw-duration-[0.3s]"
+                        href=""
+                        aria-label="signup"
+                        class="tw-rounded-md tw-border-[1px] tw-border-black tw-bg-transparent tw-px-3 tw-py-2 tw-text-black tw-transition-colors tw-duration-[0.3s] hover:tw-bg-black hover:tw-text-white"
                     >
-                        <i class="bi bi-facebook"></i>
-                    </a>
-
-                    <a
-                        href="https://www.instagram.com/"
-                        target="_blank"
-                        rel="no-referrer"
-                        area-label="twitter"
-                        class="header-links tw-transition-colors tw-duration-[0.3s]"
-                    >
-                        <i class="bi bi-instagram"></i>
+                        <span>Download</span>
+                        <i class="bi bi-download"></i>
                     </a>
                 </div>
             </div>
             <button
-                class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-white md:tw-hidden"
+                class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden"
                 onclick="toggleHeader()"
                 aria-label="menu"
                 id="collapse-btn"
-            >
-                <!-- <i class="bi bi-list"></i> -->
-            </button>
+            ></button>
         </header>
 
         <section
-            class="tw-relative tw-flex tw-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-md:tw-h-[100dvh]"
+            class="hero-section tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-md:tw-mt-[50px]"
             id="hero-section"
-        >
-            <img
-                src="./assets/images/homepage/restaurant.jpg"
-                alt="Restaurant"
-                class="tw-h-full tw-w-full tw-object-cover"
-            />
-            <div
-                class="tw-absolute tw-h-full tw-w-full tw-bg-[#0000007d]"
-            ></div>
-            <div
-                class="tw-absolute tw-left-[50%] tw-top-[50%] tw-flex tw-w-full tw-translate-x-[-50%] tw-translate-y-[-50%] tw-flex-col tw-place-content-center tw-place-items-center tw-gap-4 tw-p-2 tw-text-white"
-            >
-                <img
-                    src="./assets/logo/kitchen.svg"
-                    alt="kitchen"
-                    class="tw-h-[150px] tw-w-[150px] max-md:tw-h-[100px] max-md:tw-w-[100px]"
-                />
+        >   
 
-                <h1
-                    class="khula-font tw-text-7xl tw-font-semibold max-md:tw-text-center max-md:tw-text-5xl"
-                >
-                    Bistro Restaurants
-                </h1>
-                <div
-                    class="tw-mt-3 tw-flex tw-w-full tw-place-content-center tw-gap-[2%] max-md:tw-gap-[4%]"
-                >
-                    <a
-                        href="https://5"
-                        target="_blank"
-                        rel="noreferrer"
-                        class="tw-flex tw-rounded-full tw-bg-white tw-p-3 tw-px-[20px] tw-text-black tw-transition-colors tw-duration-[0.3s] hover:tw-bg-primary hover:tw-text-white"
+            <div class="tw-w-full tw-h-full tw-p-[5%]
+                        tw-place-content-center tw-min-h-[100vh]
+                        tw-gap-6 max-xl:tw-place-items-center
+                        tw-flex max-xl:tw-flex-col">
+                    <div
+                        class="tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-max-w-[50%] tw-flex-col tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-p-4"
                     >
-                        Order online
-                    </a>
-                    <a
-                        href="https://maps.app.goo.gl/"
-                        target="_blank"
-                        rel="noreferrer"
-                        class="tw-flex tw-gap-2 tw-rounded-full tw-bg-white tw-p-3 tw-px-[20px] tw-text-black tw-transition-colors tw-duration-[0.3s] hover:tw-bg-primary hover:tw-text-white"
-                    >
-                        <span>View on map</span>
-                        <i class="bi bi-geo-alt"></i>
-                    </a>
-                </div>
+                        <div
+                            class="tw-flex tw-flex-col tw-place-content-center tw-items-center"
+                        >
+                            <div
+                                class="reveal-up tw-text-center tw-text-6xl tw-font-semibold tw-uppercase tw-leading-[80px] max-lg:tw-text-4xl max-md:tw-leading-snug"
+                            >
+                                <span class=""> Discover the hidden  </span>
+                                <br />
+                                <span class=""> Parts of the world </span>
+                            </div>
+                            
+                        </div>
+
+                        <div class="tw-flex tw-flex-col tw-w-full tw-place-items-center tw-place-content-center">
+                            <div
+                                class="reveal-up tw-mt-3 tw-max-w-[450px] tw-p-2 tw-text-center tw-text-gray-700 max-lg:tw-max-w-full"
+                            >
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit
+                                Lorem ipsum dolor sit amet.
+                            </div>
+
+                            <div
+                                class="reveal-up tw-mt-10 tw-flex tw-place-items-center tw-gap-4"
+                            >
+                                <a
+                                    class="btn tw-bg-[#7e22ce85] tw-shadow-lg tw-shadow-primary tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
+                                    href=""
+                                >
+                                    Get started
+                                </a>
+                                <a
+                                    class="btn tw-flex tw-gap-2 !tw-border-solid !tw-border-[1px] !tw-border-black !tw-text-black !tw-bg-transparent tw-transition-colors tw-duration-[0.3s] hover:!tw-bg-white hover:!tw-text-black"
+                                    href=""
+                                >
+                                    <i class="bi bi-play-circle-fill"></i>
+                                    <span>Learn more</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reveal-up tw-max-w-[750px]  tw-max-h-[100vh] tw-w-full tw-flex tw-place-content-center tw-overflow-hidden">
+                        <div class="tw-relative tw-max-w-[450px] slide-in tw-flex tw-place-content-center">
+                            <div class="tw-overflow-hidden">
+                                <img src="./assets/images/home/phone.png" 
+                                        alt="phone" class="tw-h-full" srcset="">
+                            </div>
+                            <div class="tw-absolute tw-bottom-10 tw-max-h-[350px] tw-overflow-hidden">
+                                <div class="swiper slideshow-container 
+                                            tw-p-5 tw-max-h-[350px] tw-relative
+                                            tw-max-w-[350px]
+                                            max-lg:tw-max-w-[300px]
+                                            max-lg:tw-max-h-[260px]
+                                            max-lg:!tw-mt-10 ">
+
+                                    <div class="swiper-wrapper tw-w-full tw-max-h-[650px]  tw-relative"
+                                                id="slideshow" >      
+                                    
+                                    
+                                    </div>
+                                    <p class="prev">&#10094;</a>
+                                    <p class="next">&#10095;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
             </div>
         </section>
 
         <section
-            class="tw-flex tw-min-h-[60vh] tw-w-full tw-place-content-center tw-place-items-center tw-gap-[10%] tw-bg-[#fff] tw-p-4 tw-px-[20%] max-md:tw-flex-col max-md:tw-gap-[4%] max-md:tw-px-[5%]"
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-8"
         >
-            <div
-                class="tw-flex tw-h-[350px] tw-w-[350px] tw-overflow-hidden tw-rounded-md max-md:tw-mt-[5%] max-md:tw-h-[300px] max-md:tw-w-[300px]"
-            >
-                <img
-                    src="./assets/images/homepage/coffee.jpg"
-                    alt="coffee"
-                    class="tw-w-full tw-object-cover"
-                />
-            </div>
-            <div
-                class="tw-flex tw-h-full tw-flex-col tw-gap-[5%] max-md:tw-mt-2 max-md:tw-gap-[3%] max-md:tw-text-center"
-            >
-                <h2
-                    class="primary-text-color tw-text-3xl tw-font-medium max-md:tw-text-2xl"
-                >
-                    Bistro Restaurant
-                </h2>
-                <h3 class="tw-text-5xl max-md:tw-text-3xl">Welcomes you</h3>
-                <div class="tw-mt-6 tw-max-w-[350px] tw-text-justify">
-                    Discover the charm of Bistro, an authentic English
-                    restaurant offering a taste of Ireland in every bite.
-                    Indulge in traditional English cuisine crafted with care,
-                    complemented by warm hospitality and a cozy ambiance. From
-                    hearty stews to savory pies, experience the flavors of
-                    English at Bistro
-                </div>
-                <a
-                    href="https://maps.app.goo.gl/"
-                    class="btn tw-mt-5 tw-transition-transform tw-duration-[0.3s] hover:tw-translate-x-2 max-md:tw-mx-auto"
-                >
-                    <span>View on map</span>
-                    <i class="bi bi-arrow-right"></i>
-                </a>
-            </div>
-            <div></div>
-        </section>
-
-        <section
-            class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-bg-[#fff] tw-p-[5%] max-md:tw-px-[5%]"
-        >
-            <h2 class="tw-text-xl tw-italic">
-                Discover Authentic English Flavours
+            <h2 class="reveal-up tw-text-3xl max-md:tw-text-xl">
+                Trusted by brands you know
             </h2>
-            <h3 class="primary-text-color tw-text-4xl tw-font-semibold">
-                Explore our menu
-            </h3>
 
-            <div
-                class="tw-mt-[5%] tw-flex tw-w-full tw-place-content-center tw-gap-5 max-md:tw-flex-wrap"
-            >
+            <div class="reveal-up carousel-container">
                 <div
-                    class="tw-flex tw-max-w-[650px] tw-flex-col tw-gap-5 tw-overflow-clip md:tw-max-h-[700px]"
+                    class="carousel lg:w-place-content-center tw-mt-6 tw-flex tw-w-full tw-gap-5 max-md:tw-gap-2"
                 >
-                    <div class="tw-flex tw-gap-5 max-md:tw-flex-col">
-                        <div
-                            class="menu-item-container tw-relative tw-h-[450px] tw-w-[80%] tw-cursor-pointer tw-overflow-clip tw-rounded-lg max-md:tw-w-full"
-                        >
-                            <img
-                                src="./assets/images/homepage/coffee.jpg"
-                                alt="authentic wine"
-                                class="tw-h-full tw-w-full tw-object-cover tw-transition-[scale] tw-duration-[0.4s]"
-                            />
-
-                            <div class="menu-btn tw-text-xl">Coffee</div>
-                        </div>
-                        <div
-                            class="menu-item-container tw-relative tw-h-[450px] tw-w-[80%] tw-cursor-pointer tw-overflow-clip tw-rounded-lg max-md:tw-w-full"
-                        >
-                            <img
-                                src="./assets/images/homepage/lunch.jpg"
-                                alt="Lunch"
-                                class="tw-h-full tw-w-full tw-object-cover tw-transition-[scale] tw-duration-[0.4s]"
-                            />
-
-                            <div class="menu-btn tw-text-xl">Lunch</div>
-                        </div>
-                    </div>
-                    <div
-                        class="menu-item-container tw-relative tw-h-[240px] tw-w-full tw-cursor-pointer tw-overflow-clip tw-rounded-lg"
-                    >
+                    <!-- add the brands using your app  -->
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
                         <img
-                            src="./assets/images/homepage/dinner.jpg"
-                            alt="authentic wine"
-                            class="tw-h-full tw-w-full tw-object-cover tw-transition-[scale] tw-duration-[0.4s]"
+                            src="./assets/images/brand-logos/google.svg"
+                            alt="Google"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
                         />
-
-                        <div class="menu-btn tw-text-xl">Dinner</div>
                     </div>
-                </div>
-                <div class="tw-flex tw-flex-col tw-gap-5 md:tw-h-[700px]">
-                    <div
-                        class="menu-item-container tw-relative tw-h-[33%] tw-w-[350px] tw-cursor-pointer tw-overflow-clip tw-rounded-lg max-md:tw-w-full"
-                    >
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
                         <img
-                            src="./assets/images/homepage/breakfast.jpg"
-                            alt="authentic wine"
-                            class="tw-h-full tw-w-full tw-object-cover tw-transition-[scale] tw-duration-[0.4s]"
+                            src="./assets/images/brand-logos/microsoft.svg"
+                            alt="Microsoft"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
                         />
-
-                        <div class="menu-btn tw-text-xl">Breakfast</div>
                     </div>
-                    <div
-                        class="menu-item-container tw-relative tw-h-[33%] tw-w-[350px] tw-cursor-pointer tw-overflow-clip tw-rounded-lg max-md:tw-w-full"
-                    >
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
                         <img
-                            src="./assets/images/homepage/wine.jpeg"
-                            alt="authentic wine"
-                            class="tw-h-full tw-w-full tw-object-cover tw-transition-[scale] tw-duration-[0.4s]"
+                            src="./assets/images/brand-logos/adobe.svg"
+                            alt="Adobe"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
                         />
-
-                        <div class="menu-btn tw-text-xl">Drinks</div>
                     </div>
-                    <div
-                        class="menu-item-container tw-relative tw-h-[33%] tw-w-[350px] tw-cursor-pointer tw-overflow-clip tw-rounded-lg max-md:tw-w-full"
-                    >
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
                         <img
-                            src="./assets/images/homepage/dessert.jpg"
-                            alt="Desserts"
-                            class="tw-h-full tw-w-full tw-object-cover tw-transition-[scale] tw-duration-[0.4s]"
+                            src="./assets/images/brand-logos/airbnb.svg"
+                            alt="Adobe"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
                         />
-
-                        <div class="menu-btn tw-text-xl">Desserts</div>
+                    </div>
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                        <img
+                            src="./assets/images/brand-logos/stripe.svg"
+                            alt="Adobe"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
+                        />
+                    </div>
+                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                        <img
+                            src="./assets/images/brand-logos/reddit.svg"
+                            alt="Adobe"
+                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                            srcset=""
+                        />
                     </div>
                 </div>
             </div>
         </section>
 
         <section
-            class="tw-flex tw-w-full tw-place-content-center tw-place-items-center tw-gap-[10%] tw-overflow-hidden tw-bg-[#EFEFEF] tw-p-4 tw-px-[10%] max-md:tw-flex-col"
-            id="reservation"
+            class="tw-relative tw-flex tw-w-full tw-min-h-[60vh] tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-8"
         >
-            <div
-                class="tw-flex tw-h-[350px] tw-w-[350px] tw-overflow-hidden tw-rounded-md max-md:tw-hidden"
-            >
-                <img
-                    src="./assets/images/homepage/restaurant.jpg"
-                    alt="restaurant"
-                    class="tw-w-full tw-object-cover"
-                />
-            </div>
-            <div class="tw-mt-[5%] tw-flex tw-h-full tw-flex-col tw-gap-[5%]">
-                <div class="tw-flex tw-flex-col tw-gap-2">
-                    <h2
-                        class="primary-text-color tw-text-3xl tw-font-medium max-md:tw-text-xl"
-                    >
-                        Reservation
-                    </h2>
-                    <h3 class="tw-text-5xl max-md:tw-text-3xl">
-                        Book your table
-                    </h3>
+            
+            <div class="reveal-up tw-flex tw-border-[1px] max-lg:tw-w-full tw-border-black tw-rounded-md tw-p-2 tw-max-w-[850px] tw-w-[1000px] tw-min-h-[550px] max-lg:tw-min-w-[320px] max-lg:tw-min-h-[250px] max-lg:tw-h-auto">
+
+                <div class="tw-relative tw-bg-black tw-min-w-full tw-min-h-full tw-overflow-clip tw-rounded-md">
+                    <iframe class="tw-absolute tw-top-[50%] tw--translate-y-[50%] tw-left-[50%] tw--translate-x-[50%] tw-w-full tw-h-full" src="https://www.youtube.com/embed/WrfN3iJzrWs?si=BEQ4iPK9NXSM_fkk&amp;controls=0&rel=0&showinfo=0&autoplay=1&loop=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                <form
-                    class="tw-mt-4 tw-flex tw-max-w-[350px] tw-flex-col tw-gap-3"
-                >
-                    <div class="tw-flex tw-flex-col tw-gap-4">
-                        <div class="tw-flex tw-flex-col tw-gap-1">
-                            <div class="tw-text-gray-500">Name</div>
-                            <input
-                                type="text"
-                                class="input"
-                                maxlength="10"
-                                required
-                                placeholder="name"
-                            />
-                        </div>
-                        <div class="tw-flex tw-flex-col tw-gap-1">
-                            <div class="tw-text-gray-500">Phone</div>
-                            <input
-                                type="text"
-                                class="input"
-                                required
-                                placeholder="phone"
-                            />
-                        </div>
-                        <div class="tw-flex tw-flex-col tw-gap-1">
-                            <div class="tw-text-gray-500">Email</div>
-                            <input
-                                type="email"
-                                class="input"
-                                required
-                                placeholder="email"
-                                id="email"
-                            />
-                        </div>
-                    </div>
 
-                    <div class="tw-flex tw-gap-4">
-                        <div class="tw-flex tw-w-full tw-flex-col tw-gap-1">
-                            <div class="tw-text-gray-500">Time</div>
-                            <select
-                                name="timings"
-                                id="timings"
-                                class="input"
-                            ></select>
-                        </div>
-                        <div class="tw-flex tw-flex-col tw-gap-1">
-                            <div class="tw-text-gray-500">Date</div>
-                            <input
-                                type="date"
-                                class="input"
-                                required
-                                placeholder="date"
-                                id="date"
-                            />
-                        </div>
-                    </div>
-
-                    <div class="tw-flex tw-w-full tw-gap-4 max-md:tw-flex-col">
-                        <div class="tw-flex tw-w-full tw-flex-col tw-gap-1">
-                            <div class="tw-text-gray-500">People</div>
-                            <input
-                                type="number"
-                                value="2"
-                                min="0"
-                                max="15"
-                                class="input"
-                            />
-                        </div>
-                    </div>
-
-                    <button
-                        type="submit"
-                        class="btn tw-ml-auto tw-mt-5 tw-transition-transform tw-duration-[0.3s] hover:tw-translate-x-2"
-                    >
-                        <span>Book table</span>
-                        <i class="bi bi-arrow-right"></i>
-                    </button>
-                </form>
-                <div
-                    class="tw-mt-4 tw-flex tw-flex-col tw-gap-2 tw-text-center"
-                >
-                    <h3 class="tw-text-xl">To book call</h3>
-
-                    <div class="primary-text-color tw-text-3xl">
-                        +123 232 123
-                    </div>
-                </div>
             </div>
         </section>
 
         <section
-            class="tw-mt-5 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[5%]"
+            class="tw-relative tw-mt-10 tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-items-center lg:tw-p-6"
+        >
+
+            <h2 class="tw-text-4xl max-md:tw-text-3xl">Experience the key benefits</h2>
+            
+            <div
+                class="reveal-up tw-mt-[5%] tw-flex tw-h-full tw-w-full tw-place-content-center tw-gap-8 tw-p-4 max-lg:tw-max-w-full max-lg:tw-flex-col"
+            >
+                <div
+                    class="tw-flex tw-flex-col tw-gap-[200px] tw-h-full tw-max-w-[50%] max-lg:tw-max-w-full tw-px-[10%] max-lg:tw-px-4 max-lg:tw-gap-16 max-lg:tw-w-full lg:tw-top-[20%]"
+                >   
+                    <div class="tw-flex tw-gap-6">
+                        <div class="tw-w-[80px] tw-h-[80px] tw-min-w-[80px] 
+                                    tw-min-h-[80px] tw-text-5xl
+                                    max-lg:tw-min-h-[60px] max-lg:tw-min-w-[60px] max-lg:tw-h-[60px] max-lg:tw-w-[60px]">
+                            <!-- <img src="./assets/images/icons/unlock.png" alt="unlock" class="tw-object-contain tw-w-full tw-h-full"> -->
+                            <i class="bi bi-lock-fill"></i>
+                        </div>
+                        <h3
+                            class="tw-text-4xl max-lg:tw-text-2xl max-lg:tw-font-normal"
+                        >
+                            Easily integrate navigator with your car
+                        </h3>
+                    </div>
+
+                    <div class="tw-flex tw-gap-6">
+                        <div class="tw-w-[80px] tw-h-[80px] tw-text-5xl tw-min-w-[80px] tw-min-h-[80px] max-lg:tw-min-h-[60px] max-lg:tw-min-w-[60px] max-lg:tw-h-[60px] max-lg:tw-w-[60px]">
+                            <!-- <img src="./assets/images/icons/lighting.png" alt="unlock" class="tw-object-contain tw-w-full tw-h-full"> -->
+                            <i class="bi bi-lightning-fill"></i>
+                        </div>
+                        <h3
+                            class="tw-text-4xl max-lg:tw-text-2xl max-lg:tw-font-normal"
+                        >
+                            Lightingin fast, Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </h3>
+                    </div>
+
+                    <div class="tw-flex tw-gap-6">
+                        <div class="tw-w-[80px] tw-text-5xl tw-h-[80px] tw-min-w-[80px] tw-min-h-[80px] max-lg:tw-min-h-[60px] max-lg:tw-min-w-[60px] max-lg:tw-h-[60px] max-lg:tw-w-[60px]">
+                            <!-- <img src="./assets/images/icons/credit-card.png" alt="unlock" class="tw-object-contain tw-w-full tw-h-full"> -->
+                            <i class="bi bi-credit-card"></i>
+                        </div>
+                        <h3
+                            class="tw-text-4xl max-lg:tw-text-2xl max-lg:tw-font-normal"
+                        >
+                            Add credit card, sr sit amet consectetur adipisicing elit.
+                        </h3>
+                    </div>
+
+                    <div class="tw-flex tw-gap-6">
+                        <div class="tw-w-[80px] tw-text-5xl tw-h-[80px] tw-min-w-[80px] tw-min-h-[80px] max-lg:tw-min-h-[60px] max-lg:tw-min-w-[60px] max-lg:tw-h-[60px] max-lg:tw-w-[60px]">
+                            <!-- <img src="./assets/images/icons/music.png" alt="unlock" class="tw-object-contain tw-w-full tw-h-full"> -->
+                            <i class="bi bi-music-note-beamed"></i>
+                        </div>
+                        <h3
+                            class="tw-text-4xl max-lg:tw-text-2xl max-lg:tw-font-normal"
+                        >
+                            Integrate music, sr sit amet consectetur adipisicing elit.
+                        </h3>
+                    </div>
+
+                    <div class="tw-flex tw-gap-6">
+                        <div class="tw-w-[80px] tw-text-5xl tw-h-[80px] tw-min-w-[80px] tw-min-h-[80px] max-lg:tw-min-h-[60px] max-lg:tw-min-w-[60px] max-lg:tw-h-[60px] max-lg:tw-w-[60px]">
+                            <!-- <img src="./assets/images/icons/unlock.png" alt="unlock" class="tw-object-contain tw-w-full tw-h-full"> -->
+                            <i class="bi bi-lock-fill"></i>
+                        </div>
+                        <h3
+                            class="tw-text-4xl max-lg:tw-text-2xl max-lg:tw-font-normal"
+                        >
+                            Vola wespon, sr sit amet consectetur adipisicing elit.
+                        </h3>
+                    </div>
+
+                    <div class="tw-flex tw-gap-6">
+                        <div class="tw-w-[80px] tw-text-5xl tw-h-[80px] tw-min-w-[80px] tw-min-h-[80px] max-lg:tw-min-h-[60px] max-lg:tw-min-w-[60px] max-lg:tw-h-[60px] max-lg:tw-w-[60px]">
+                            <!-- <img src="./assets/images/icons/lighting.png" alt="unlock" class="tw-object-contain tw-w-full tw-h-full"> -->
+                            <i class="bi bi-lightning-fill"></i>
+                        </div>
+                        <h3
+                            class="tw-text-4xl max-lg:tw-text-2xl max-lg:tw-font-normal"
+                        >
+                            Integrate Lightning, sr sit amet consectetur adipisicing elit.
+                        </h3>
+                    </div>
+
+                </div>
+
+                <div
+                    class="tw-relative tw-flex tw-max-w-[30%] max-lg:tw-max-w-full tw-flex-col tw-place-items-start tw-gap-4  tw-p-2 max-lg:tw-place-items-center max-lg:tw-place-content-center max-lg:tw-w-full"
+                >
+                    <div
+                        class="tw-top-20 lg:tw-sticky tw-max-h-[800px] tw-h-full tw-max-w-[850px] max-lg:tw-max-h-fit max-lg:tw-max-w-[320px] tw-overflow-hidden tw-rounded-lg"
+                    >
+                        <img
+                            src="./assets/images/home/phone2.png"
+                            alt="phone"
+                            class="tw-h-full tw-w-full tw-object-contain"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section
+            class="tw-relative tw-mt-10 tw-flex tw-min-h-[20vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-items-center lg:tw-p-6"
+        >
+
+            <div class="tw-w-full tw-flex tw-mt-8 tw-h-fit
+                        tw-max-w-[100vw] tw-overflow-hidden tw-relative">
+                <div class="edge-gradient tw-z-10 tw-absolute tw-w-full tw-h-full tw-left-0">
+                </div>
+                <div class="countries-container scroller tw-flex tw-w-full tw-gap-3" 
+                    data-direction="right" >
+                </div>
+                
+            </div>
+            <div class="tw-w-full tw-flex tw-relative tw-h-fit tw-mt-8
+                    tw-max-w-[100vw] 
+                    tw-overflow-hidden">
+                <div class="edge-gradient tw-z-10 tw-absolute tw-w-full tw-h-full tw-left-0">
+                </div>
+                <div class="places-container scroller tw-flex tw-w-full tw-gap-3" 
+                    data-direction="left" data-speed="slow" >
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="tw-w-full tw-flex 
+                    tw-flex-col
+                    tw-place-content-center 
+                    tw-px-[10%]
+                    tw-p-4
+                    tw-gap-[10%]
+                    tw-place-items-center
+                    max-md:tw-flex-col
+                    tw-overflow-hidden
+                    tw-min-h-[30vh]
+                    "
+                    id="book"
+                    >
+
+            <h2 class="tw-text-3xl max-md:tw-text-2xl tw-mt-7">
+                Plan your next desitnation
+            </h2>
+
+            <a href="" class="btn !tw-text-black !tw-bg-transparent tw-flex tw-gap-2 !tw-border-[1px] !tw-border-black tw-mt-[2%] max-md:tw-mt-8 hover:tw-scale-105 tw-duration-[0.3s]">
+                <span>Book now</span>
+                <i class="bi bi-send-fill"></i>
+            </a>
+
+            <div class="tw-flex max-md:tw-mt-8 tw-place-items-center tw-mt-[5%] tw-gap-6">
+
+                <div>
+                    <img src="./assets/images/brand-logos/app-store-badge.png" 
+                            alt="App store badge" class="tw-max-w-[150px] tw-h-[50px]">
+                </div>
+                <div>
+                    <img src="./assets/images/brand-logos/google-play-badge.png" 
+                            alt="App store badge" class="tw-max-w-[150px] tw-h-[50px]">
+                </div>
+
+            </div>
+        
+        </section>
+
+        <section
+            class="tw-mt-5 tw-flex tw-min-h-[80vh] tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-p-[2%] max-lg:tw-p-3"
         >
             <h3
-                class="primary-text-color tw-text-3xl tw-font-medium max-md:tw-text-2xl"
+                class="reveal-up tw-text-center tw-text-4xl tw-font-medium max-md:tw-text-2xl"
             >
-                What some of our diners say
+                Read our articles ✨
             </h3>
-
+            <!-- articles -->
             <div
-                class="tw-mt-[5%] tw-flex tw-w-full tw-place-content-center tw-gap-[5%]"
+                class="reveal-up tw-mt-10 tw-flex tw-flex-wrap tw-place-content-center tw-gap-10 max-lg:tw-flex-col"
             >
-                <div class="review-container tw-flex tw-flex-col">
-                    <div class="tw-flex !tw-h-[150px] tw-max-w-[550px]">
-                        <div
-                            class="slides fade tw-text-justify tw-text-lg max-md:tw-text-base"
-                        >
-                            <q class="tw-italic tw-text-gray-600">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Quaerat veritatis assumenda
-                                dolor delectus laborum odio consequatur
-                                accusantium quam? Ad, odit.
-                            </q>
-                            <div class="tw-mt-2 tw-text-yellow-400">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <p class="tw-mt-3">- Trich B</p>
-                        </div>
-
-                        <div
-                            class="slides fade tw-text-justify tw-text-lg max-md:tw-text-base"
-                        >
-                            <q class="tw-italic tw-text-gray-600">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Totam, sint.
-                            </q>
-                            <div class="tw-mt-2 tw-text-yellow-400">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <p class="tw-mt-3">- Bára Müllerová</p>
-                        </div>
-
-                        <div
-                            class="slides fade tw-text-justify tw-text-lg max-md:tw-text-base"
-                        >
-                            <q class="tw-italic tw-text-gray-600">
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Dolore sapiente possimus
-                                quibusdam nesciunt, architecto distinctio.
-                            </q>
-                            <div class="tw-mt-2 tw-text-yellow-400">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <p class="tw-mt-3">- Matt freeman</p>
-                        </div>
-                    </div>
-
-                    <!-- Navigation dots -->
-                    <div class="dots-container tw-mt-auto">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                class="tw-mt-[5%] tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-5"
-            >
-                <h2 class="primary-text-color tw-text-3xl">On the map</h2>
-                <iframe
-                    src="https://www.google.com/maps/embed?"
-                    class="tw-h-[350px] tw-w-[600px] max-md:tw-w-full"
-                    style="border: 0"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
-            </div>
-            <div
-                class="tw-mt-[5%] tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-5"
-            >
-                <h2 class="primary-text-color tw-text-3xl">Award</h2>
-
-                <div
-                    class="tw-flex tw-w-full tw-place-content-center tw-gap-[5%] max-md:tw-flex-wrap"
+                <a
+                    href=""
+                    class="tw-flex tw-border-[1px] tw-border-black tw-h-[400px] tw-w-[400px] tw-flex-col tw-gap-4 tw-overflow-clip tw-rounded-lg tw-p-4 max-lg:tw-w-[300px]"
                 >
-                    <img
-                        src="./assets/images/homepage/tripadvisor-travellers choice.png"
-                        alt="Tripadvisor travelers choice award"
-                        class="tw-h-[250px] tw-w-[250px] max-md:tw-h-[150px] max-md:tw-w-[150px]"
-                    />
-                </div>
+                    <div
+                        class="tw-h-[250px] tw-w-full tw-overflow-hidden tw-rounded-md"
+                    >
+                        <img
+                            src="./assets/images/home/forest.jpg"
+                            alt="article image"
+                            class="tw-h-full tw-w-full tw-object-cover tw-transition-transform tw-duration-[0.3s] hover:tw-scale-[1.04]"
+                            srcset=""
+                        />
+                    </div>
+                    <h3
+                        class="tw-mt-2 tw-text-2xl tw-font-semibold max-md:tw-text-xl"
+                    >
+                        Article 1
+                    </h3>
+                    <p class="tw-text-gray-800">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ab, explicabo!
+                    </p>
+                    <span>
+                        <span>Learn more</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </span>
+                </a>
+                <a
+                    href=""
+                    class="tw-border-[1px] tw-border-black tw-flex tw-h-[400px] tw-w-[400px] tw-flex-col tw-gap-4 tw-overflow-clip tw-rounded-lg tw-p-4 max-lg:tw-w-[300px]"
+                >
+                    <div
+                        class="tw-h-[250px] tw-w-full tw-overflow-hidden tw-rounded-md"
+                    >
+                        <img
+                            src="./assets/images/home/mountain.jpg"
+                            alt="article image"
+                            class="tw-h-full tw-w-full tw-object-cover tw-transition-transform tw-duration-[0.3s] hover:tw-scale-[1.04]"
+                            srcset=""
+                        />
+                    </div>
+                    <h3
+                        class="tw-mt-2 tw-text-2xl tw-font-semibold max-md:tw-text-xl"
+                    >
+                        Article 2
+                    </h3>
+                    <p class="tw-text-gray-800">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ab, explicabo!
+                    </p>
+                    <span>
+                        <span>Learn more</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </span>
+                </a>
+                <a
+                    href=""
+                    class="tw-border-[1px] tw-border-black tw-flex tw-h-[400px] tw-w-[400px] tw-flex-col tw-gap-4 tw-overflow-clip tw-rounded-lg tw-p-4 max-lg:tw-w-[300px]"
+                >
+                    <div
+                        class="tw-h-[250px] tw-w-full tw-overflow-hidden tw-rounded-md"
+                    >
+                        <img
+                            src="./assets/images/home/photography.jpg"
+                            alt="article image"
+                            class="tw-h-full tw-w-full tw-object-cover tw-transition-transform tw-duration-[0.3s] hover:tw-scale-[1.04]"
+                            srcset=""
+                        />
+                    </div>
+                    <h3
+                        class="tw-mt-2 tw-text-2xl tw-font-semibold max-md:tw-text-xl"
+                    >
+                        Article 3
+                    </h3>
+                    <p class="tw-text-gray-800">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ab, explicabo!
+                    </p>
+                    <span>
+                        <span>Learn more</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </span>
+                </a>
             </div>
         </section>
 
         <section
-            class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-bg-[#EFEFEF] tw-p-[5%] tw-px-[10%]"
+            class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[5%] tw-px-[10%]"
         >
-            <div
-                class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-3"
+            <h3
+                class="tw-text-4xl tw-font-medium tw-text-gray-800 max-md:tw-text-2xl"
             >
-                <h2 class="primary-text-color tw-text-3xl max-md:tw-text-xl">
-                    Special Newsletter signup
-                </h2>
-                <h2 class="tw-text-xl max-md:tw-text-lg">
-                    Get offers and updates
-                </h2>
+                Faq
+            </h3>
+            <div
+                class="tw-mt-5 tw-flex tw-min-h-[300px] tw-w-full tw-max-w-[850px] tw-flex-col tw-gap-4"
+            >
+                <div
+                    class="faq tw-w-full"
+                >
+                    <div
+                        class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+                    >
+                        <span>What license are the source code?</span>
+                        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                    </div>
+                    <div class="content">
+                        All the templates are under MIT license
+                    </div>
+                </div>
 
                 <div
-                    class="input tw-flex tw-h-[50px] tw-place-items-center tw-overflow-hidden !tw-rounded-full tw-bg-white tw-p-2"
+                    class="faq tw-w-full"
                 >
-                    <input
-                        type="email"
-                        class="tw-h-full tw-w-full tw-px-3 tw-outline-none"
-                        placeholder="email"
-                    />
-                    <button
-                        class="btn tw-h-[35px] tw-bg-primary tw-transition-colors tw-duration-[0.3s]"
+                    <div
+                        class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
                     >
-                        Signup
-                    </button>
+                        <span>Can I request new templates?</span>
+                        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                    </div>
+                    <div class="content">
+                        you can request a generic template from
+                        <a
+                            href="https://github.com/PaulleDemon/landing-pages/issues/new/choose"
+                            class="tw-underline"
+                        >
+                            Github template request</a
+                        >. If you are looking for Custom design you should
+                        <a href="https://tally.so/r/woO0Kx" class="tw-underline"
+                            >contact here</a
+                        >
+                    </div>
                 </div>
-            </div>
 
-            <div
-                class="tw-mt-[5%] tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-3"
-            >
-                <h2 class="primary-text-color tw-text-3xl max-md:tw-text-xl">
-                    Like us?
-                </h2>
-                <h2 class="tw-text-xl max-md:tw-text-lg">Tell us more</h2>
+                <div
+                    class="faq tw-w-full"
+                >
+                    <div
+                        class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+                    >
+                        <span>I need a custom template?</span>
+                        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                    </div>
+                    <div class="content">
+                        If you are looking for Custom design you can
+                        <a href="https://tally.so/r/woO0Kx" class="tw-underline"
+                            >contact here</a
+                        >
+                    </div>
+                </div>
 
-                <div class="tw-flex">
-                    <div class="stars" data-rating="0">
-                        <span class="star" data-value="1">&#9733;</span>
-                        <span class="star" data-value="2">&#9733;</span>
-                        <span class="star" data-value="3">&#9733;</span>
-                        <span class="star" data-value="4">&#9733;</span>
-                        <span class="star" data-value="5">&#9733;</span>
+                <div
+                    class="faq tw-w-full"
+                >
+                    <div
+                        class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+                    >
+                        <span>Will you add new templates?</span>
+                        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+                    </div>
+                    <div class="content">
+                        New templates are added every Friday. So star ⭐️
+                        <a
+                            href="https://github.com/PaulleDemon/awesome-landing-pages"
+                            class="tw-underline"
+                            >Github</a
+                        >
                     </div>
                 </div>
             </div>
-        </section>
-
-        <div
-            class="tw-fixed tw-left-[50%] tw-top-[50%] tw-z-40 tw-flex tw-hidden tw-max-h-[450px] tw-w-[450px] tw-translate-x-[-50%] tw-translate-y-[-50%] tw-flex-col tw-rounded-md tw-bg-white tw-p-3 tw-shadow-2xl max-md:tw-w-[350px]"
-            id="modal"
-        >
-            <div class="tw-relative tw-h-[40px] tw-w-full">
-                <button
-                    class="bi bi-x tw-absolute tw-right-2 tw-text-4xl"
-                    id="modal-close"
-                ></button>
-            </div>
-            <h2
-                class="tw-mt-[5%] tw-text-center tw-text-2xl"
-                id="modal-title"
-            ></h2>
 
             <div
-                class="tw-mt-2 tw-text-base tw-font-normal"
-                id="modal-description"
-            ></div>
-
-            <textarea
-                id="modal-input"
-                placeholder="write..."
-                maxlength="2000"
-                class="input tw-mt-2 tw-hidden tw-max-h-[150px] tw-min-h-[50px] tw-w-full tw-resize-y tw-text-base tw-font-normal"
-            ></textarea>
-
-            <div class="tw-mt-3 tw-flex tw-w-full tw-place-content-center">
+                class="tw-mt-20 tw-flex tw-flex-col tw-place-items-center tw-gap-4"
+            >
+                <div class="tw-text-3xl max-md:tw-text-2xl">
+                    Still have questions?
+                </div>
                 <a
-                    href="#"
-                    class="btn tw-cursor-pointer tw-text-sm"
-                    id="modal-action-btn"
+                    href="http://"
+                    class="btn !tw-rounded-full !tw-bg-black"
                 >
-                    Open
+                    Contact
                 </a>
             </div>
-        </div>
+        </section>
+
+        <section
+            class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[5%] tw-px-[10%] max-md:tw-px-2"
+        >
+
+            <div class="tw-bg-gray-100 tw-border-[1px] tw-border-black tw-h-[550px] tw-flex max-lg:tw-flex-col tw-max-h-[550px] tw-max-w-[80%]  max-lg:tw-max-h-fit max-lg:tw-h-full max-lg:tw-max-w-full tw-overflow-hidden tw-rounded-xl tw-w-full">
+                <!-- <img src="./assets/images/home/darkbg.png" alt="background" 
+                     class="tw-w-full tw-h-full"> -->
+
+                <!-- <div class="tw-flex tw-w-full tw-h-full max-lg:tw-place-items-center max-lg:tw-flex-col tw-place-content-center  tw-overflow-hidden"> -->
+                    
+                    <div
+                        class="tw-flex tw-flex-col tw-h-full tw-place-content-center tw-gap-3  tw-p-6 max-md:tw-max-w-full"
+                        >
+                        <div class="tw-flex tw-flex-col tw-gap-1">
+                            <h2 class="tw-text-3xl tw-text-black max-md:tw-text-xl">
+                                Join to Traveler today
+                            </h2>
+                            <div class="tw-text-gray-800">Lorem ipsum dolor sit.</div>
+                        </div>
+
+                        <div
+                            class="tw-flex tw-h-[60px] tw-place-items-center tw-gap-2 tw-py-2 tw-overflow-hidden"
+                        >
+                            <input
+                                type="email"
+                                class="input tw-h-full tw-w-full !tw-border-gray-600 tw-p-2 tw-outline-none"
+                                placeholder="email"
+                            />
+                            <a
+                                class="btn !tw-rounded-full !tw-text-gray-800 !tw-border-[1px] !tw-border-solid !tw-border-gray-800 !tw-bg-transparent tw-transition-colors tw-duration-[0.3s]"
+                                href=""
+                            >
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="tw-max-w-[60%] tw-w-full tw-h-full tw-flex max-lg:tw-max-w-full tw-place-content-end tw-place-items-center">
+                        <img src="./assets/images/home/phone2.png" alt="phone"
+                            class="tw-h-full tw-max-h-[90%] tw-object-contain">
+                    </div>
+
+                <!-- </div> -->
+
+                
+            </div>
+        </section>
 
         <footer
-            class="tw-flex tw-w-full tw-place-content-around tw-gap-3 tw-bg-primary tw-p-[5%] tw-px-[10%] tw-text-white max-md:tw-flex-col"
+            class="tw-mt-auto tw-flex tw-w-full tw-place-content-around tw-gap-3 tw-p-[5%] tw-px-[10%] tw-text-white max-md:tw-flex-col"
         >
             <div
                 class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full"
             >
                 <img
-                    src="./assets/bistro-white.png"
+                    src="./assets/logo/logo.png"
                     alt="logo"
                     srcset=""
-                    class="tw-max-w-[200px]"
+                    class="tw-max-w-[120px]"
                 />
                 <div>
                     2 Lord Edward St,
                     <br />
-                    Temple Bar,
-                    <br />
                     D02 P634,
                     <br />
-                    US
+                    United States
                 </div>
                 <div class="tw-mt-3 tw-text-lg tw-font-semibold">Follow us</div>
                 <div class="tw-flex tw-gap-4 tw-text-2xl">
@@ -632,56 +676,39 @@
                         <i class="bi bi-facebook"></i>
                     </a>
                     <a
-                        href="https://twitter.com/pauls_freeman"
+                        href="https://twitter.com/@pauls_freeman"
                         aria-label="Twitter"
                     >
                         <i class="bi bi-twitter"></i>
                     </a>
                     <a
-                        href="https://twitter.com/pauls_freeman"
+                        href="https://instagram.com/"
                         class="tw-h-[40px] tw-w-[40px]"
-                        aria-label="Tripadvisor"
+                        aria-label="Instagram"
                     >
-                        <svg
-                            width="25"
-                            height="25"
-                            viewBox="0 0 13.229166 13.229167"
-                            version="1.1"
-                            id="svg1"
-                            class="tw-h-[35px] tw-w-[35px]"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:svg="http://www.w3.org/2000/svg"
-                        >
-                            <defs id="defs1" />
-                            <g id="layer1">
-                                <path
-                                    style="fill: #fff; stroke-width: 1.30792"
-                                    d="M 6.0253827,10.495874 C 5.5783463,10.001905 5.4730621,9.9874894 4.9562421,10.349485 4.6409418,10.57033 3.9735136,10.751021 3.4730684,10.751021 0.89854523,10.751021 -0.60286372,8.3105194 0.57289183,6.0368587 0.91665107,5.3721018 0.94696499,5.0667983 0.70731296,4.6830543 0.43285458,4.2435768 0.4965716,4.1875715 1.2710225,4.1875715 c 0.4802291,0 1.4350231,-0.2768956 2.1217645,-0.6153233 1.7482569,-0.8615452 4.8670347,-0.8585049 6.5021593,0.00634 0.6332597,0.3349417 1.6060847,0.6089848 2.1618327,0.6089848 0.955629,0 0.986284,0.026701 0.56505,0.4921614 -0.412837,0.4561778 -0.404172,0.5754932 0.118511,1.6319261 0.477372,0.9648547 0.517018,1.2818537 0.258339,2.0656558 C 12.356309,10.323718 10.162954,11.286931 8.4225426,10.386929 7.6572822,9.991197 7.5660532,9.9989988 7.0617703,10.503283 6.5233943,11.041658 6.5192825,11.04163 6.0253827,10.495796 Z M 5.0317745,8.9365392 C 5.7722627,7.9951606 5.7488545,7.1275495 4.9581665,6.2083199 4.5005696,5.676332 4.0588414,5.4637977 3.4107611,5.4637977 c -0.6480802,0 -1.0898085,0.2125343 -1.5474052,0.7445222 -0.7906881,0.9192296 -0.8140964,1.7868407 -0.073608,2.7282193 0.4371956,0.555804 0.8078632,0.7205729 1.6210132,0.7205729 0.81315,0 1.1838179,-0.1647689 1.6210134,-0.7205729 z M 2.7954378,8.5412992 C 2.2053961,8.1976314 2.1708939,7.1104489 2.7351672,6.6421435 3.055027,6.3766836 3.3124895,6.3674224 3.8290754,6.6027948 4.6638042,6.9831227 4.7506658,8.1388301 3.9756941,8.5535824 3.3461405,8.8905092 3.3958837,8.8910272 2.7954378,8.5412992 Z M 11.25909,9.2465573 C 11.976631,8.7439728 12.303797,7.424765 11.898649,6.6677353 11.397186,5.7307446 10.165115,5.2433824 9.1725513,5.5893919 8.2063958,5.9261953 7.7863939,6.5471603 7.7863939,7.6387992 c 0,1.6428498 2.0605831,2.5968408 3.4726961,1.6077581 z M 9.127216,8.2631641 C 8.7127456,7.8486937 8.6567966,7.6134425 8.875505,7.2047823 9.0301735,6.9157817 9.2802245,6.602997 9.431174,6.5097051 9.8428305,6.2552872 10.721259,6.610132 10.912317,7.1080177 11.383218,8.335167 10.057255,9.193203 9.127216,8.2631641 Z M 8.3365565,4.1384237 C 7.7390342,3.8697618 5.2528645,3.8815881 4.8212489,4.1551454 4.5417361,4.3323 4.6520767,4.5287674 5.28366,4.9784943 5.7398981,5.3033646 6.1875949,5.8036157 6.2785418,6.0901635 6.4249349,6.5514079 6.5761377,6.4800237 7.5969399,5.4677347 8.5012911,4.5709256 8.6608127,4.2842177 8.3365565,4.1384237 Z"
-                                    id="path1"
-                                />
-                            </g>
-                        </svg>
+                        <i class="bi bi-instagram"></i>
                     </a>
                 </div>
             </div>
 
             <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
-                <h2 class="tw-text-3xl max-md:tw-text-xl">Menu</h2>
+                <h2 class="tw-text-3xl max-md:tw-text-xl">Company</h2>
                 <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
-                    <a href="" class="footer-link">Breakfast menu</a>
-                    <a href="" class="footer-link">Lunch menu</a>
-                    <a href="" class="footer-link">Dessert menu</a>
-                    <a href="" class="footer-link">Drinks menu</a>
+                    <a href="" class="footer-link">Use cases</a>
+                    <a href="" class="footer-link">Integrations</a>
+                    <a href="" class="footer-link">Change logs</a>
+                    <a href="" class="footer-link">Blogs</a>
+                    <a href="" class="footer-link">Contact</a>
                 </div>
             </div>
+
             <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
                 <h2 class="tw-text-3xl max-md:tw-text-xl">Resources</h2>
                 <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
                     <a href="" class="footer-link">About us</a>
                     <a href="" class="footer-link">FAQ</a>
                     <a href="" class="footer-link">Contact Us</a>
-                    <a href="" class="footer-link">Locations</a>
+                    <a href="" class="footer-link">Blogs</a>
                     <a href="" class="footer-link">Privacy policy</a>
                 </div>
             </div>
@@ -689,20 +716,21 @@
     </body>
 
     <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
-        integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
+        integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
     ></script>
     <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"
-        integrity="sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg=="
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
+        integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ=="
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
     ></script>
 
-    <script src="./scripts/utils.js"></script>
-    <script src="./index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- https://github.com/PaulleDemon -->
+
+    <script src="./index.js"></script>
 </html>

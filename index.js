@@ -1,80 +1,12 @@
+// initialization
+
 const RESPONSIVE_WIDTH = 1024
 
-gsap.registerPlugin(ScrollTrigger)
-
 let headerWhiteBg = false
-let isHeaderCollapsed = window.innerWidth < 1024
-const collapseHeaderItems = document.getElementById("collapsed-items")
+let isHeaderCollapsed = window.innerWidth < RESPONSIVE_WIDTH
 const collapseBtn = document.getElementById("collapse-btn")
+const collapseHeaderItems = document.getElementById("collapsed-header-items")
 
-
-const expandingBg = document.getElementById("expanding-header-bg")
-
-gsap.to(expandingBg, {
-
-    height: "100%",
-    duration: 3,
-    scrollTrigger: {
-        trigger: "#hero-section",
-        // pin: true, 
-        start: "50px 10px", // when the top of the trigger hits the top of the viewport
-        end: "80px 50px",
-        scrub: 1,
-        // markers: true
-    }
-
-})
-
-ScrollTrigger.create({
-    trigger: "#hero-section",
-    start: "50px 10px", // when the top of the trigger hits the top of the viewport
-    end: "60px 40px",
-    scrub: 1,
-    // markers: true,
-    onEnter: () => {
-        const headerLinks = document.querySelectorAll(".header-links")
-
-        // if (window.innerWidth > RESPONSIVE_WIDTH) {
-            headerLinks.forEach(e => {
-                e.classList.toggle("header-white-bg")
-            })
-        // }
-        if (isHeaderCollapsed){
-            collapseBtn.classList.add("primary-text-color")
-        }
-        headerWhiteBg = true
-    },
-    onEnterBack: () => {
-        const headerLinks = document.querySelectorAll(".header-links")
-
-        // if (window.innerWidth > RESPONSIVE_WIDTH) {
-            headerLinks.forEach(e => {
-                e.classList.toggle("header-white-bg")
-            })
-        // }
-        collapseBtn.classList.remove("primary-text-color")
-        headerWhiteBg = false
-    }
-})
-
-const menuItemContainer = document.querySelectorAll(".menu-item-container")
-
-menuItemContainer.forEach(e => {
-
-    const img = e.querySelector("img")
-    e.addEventListener("mouseenter", () => {
-        img.style.scale = 1.1
-    })
-
-    e.addEventListener("mouseleave", () => {
-        img.style.scale = 1
-    })
-
-})
-
-
-const reviewContainer = document.querySelector(".review-container")
-const reviewSlideShow = new SlideShow(reviewContainer, true, 10000)
 
 
 function onHeaderClickOutside(e) {
@@ -87,22 +19,21 @@ function onHeaderClickOutside(e) {
 
 
 function toggleHeader() {
-    
     if (isHeaderCollapsed) {
         // collapseHeaderItems.classList.remove("max-md:tw-opacity-0")
-        collapseHeaderItems.classList.add("!tw-opacity-100",)
+        collapseHeaderItems.classList.add("opacity-100",)
         collapseHeaderItems.style.width = "60vw"
-        collapseBtn.classList.remove("bi-list", "primary-text-color")
-        collapseBtn.classList.add("bi-x")
+        collapseBtn.classList.remove("bi-list")
+        collapseBtn.classList.add("bi-x", "max-lg:tw-fixed")
         isHeaderCollapsed = false
 
         setTimeout(() => window.addEventListener("click", onHeaderClickOutside), 1)
 
     } else {
-        collapseHeaderItems.classList.remove("!tw-opacity-100")
+        collapseHeaderItems.classList.remove("opacity-100")
         collapseHeaderItems.style.width = "0vw"
-        collapseBtn.classList.remove("bi-x")
-        collapseBtn.classList.add("bi-list", headerWhiteBg ? "primary-text-color" : null)
+        collapseBtn.classList.remove("bi-x", "max-lg:tw-fixed")
+        collapseBtn.classList.add("bi-list")
         isHeaderCollapsed = true
         window.removeEventListener("click", onHeaderClickOutside)
 
@@ -112,78 +43,173 @@ function toggleHeader() {
 function responsive() {
     if (window.innerWidth > RESPONSIVE_WIDTH) {
         collapseHeaderItems.style.width = ""
-    }else{
-        isHeaderCollapsed = true
-        collapseBtn.classList.add("bi-list", headerWhiteBg ? "primary-text-color" : null)
 
+    } else {
+        isHeaderCollapsed = true
     }
 }
-
-// function
 
 window.addEventListener("resize", responsive)
 
-const bookingDate = document.querySelector("#date")
-const today = new Date().toISOString().split('T')[0]
-bookingDate.setAttribute('min', today)
+
+/**
+ * Animations
+ */
+
+gsap.registerPlugin(ScrollTrigger)
 
 
-const timings = document.querySelector("#timings")
+gsap.to(".reveal-up", {
+    opacity: 0,
+    y: "100%",
+})
 
-for (let x=7; x < 20; x+=0.30){
-    const nextTime = `${x.toFixed(2)}`.replace(".", ":")
+const slideShowContainer = document.querySelector("#slideshow")
 
-    timings.innerHTML += `<option value="${nextTime}">${nextTime}</option>`
+gsap.fromTo(".slide-in", {
+    y: "100%"
+}, {
+    y: "0%",
+    duration: 1,
+})
+
+const images = [
+    "assets/images/home/hiking1.jpg",
+    "assets/images/home/hiking2.jpg",
+    "assets/images/home/hiking3.jpg",
+    "assets/images/home/hiking4.jpg",
+]
+
+function addSlideShowImages(img) {
+
+    const imageContainer = document.createElement("div")
+
+    imageContainer.classList.add("swiper-slide", "slide", "tw-rounded-md", "!tw-h-[450px]")
+
+    imageContainer.innerHTML += `
+                <img src="${img}" 
+                        alt="hiking"
+                        class="tw-object-cover tw-w-full tw-h-full">
+    `
+    slideShowContainer.prepend(imageContainer)
 
 }
 
-const reviewModal = new Modal(document.querySelector("#modal"))
+images.forEach(img => addSlideShowImages(img))
 
-const starContainer = document.querySelector('.stars')
-const stars = document.querySelectorAll('.star')
+const countries = ["United states", "Canada", "Mexico", "Brazil", "Argentina", "Sweden",
+    "Turkey", "England", "Ireland", "Finland", "Norway", "India", "Sri Lanka",
+    "China", "Russia", "Australia", "Singapore", "Malaysia"
+]
 
-function handleStarHover(event) {
-    const rating = event.currentTarget.getAttribute('data-value')
-    stars.forEach(star => {
-        if (parseInt(star.getAttribute('data-value')) <= rating) {
-            star.classList.add('active')
+const places = [
+"Eiffle Tower", "Great Wall of China", "Taj Mahal", 
+"Bali", "Maldives", "Leaning tower of Pisa", "Statue of Liberty",   
+]
+
+
+const countriesContainer = document.querySelector(".countries-container")
+const placeContainer = document.querySelector(".places-container")
+
+function addSlidingPlace(place, container){
+    
+    const imageContainer = `
+            <div class="tw-min-w-fit tw-p-2 tw-px-3 tw-w-max tw-h-[50px]
+                        tw-border-solid tw-border-[1px] tw-flex 
+                        tw-rounded-md tw-border-black
+                        tw-place-items-center tw-place-content-center
+                        tw-overflow-clip sliding-image">
+                ${place}
+            </div>
+    `
+
+    container.innerHTML += imageContainer
+
+}
+
+
+countries.forEach( img => addSlidingPlace(img, countriesContainer))
+countries.forEach( img => addSlidingPlace(img, countriesContainer))
+
+places.forEach( img => addSlidingPlace(img, placeContainer))
+places.forEach( img => addSlidingPlace(img, placeContainer))
+places.forEach( img => addSlidingPlace(img, placeContainer))
+
+
+const swiper = new Swiper(".slideshow-container", {
+    effect: "creative",
+    grabCursor: true,
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    creativeEffect: {
+        prev: {
+          shadow: true,
+          origin: "left center",
+          translate: ["-5%", 0, -200],
+          rotate: [0, 100, 0],
+        },
+        next: {
+          origin: "right center",
+          translate: ["5%", 0, -200],
+          rotate: [0, -100, 0],
+        },
+    },
+    navigation: {
+        nextEl: '.next',
+        prevEl: '.prev',
+    },
+    autoplay: {
+        delay: 3000,
+    },
+})
+
+
+
+const faqAccordion = document.querySelectorAll('.faq-accordion')
+
+faqAccordion.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+        this.classList.toggle('active')
+
+        // Toggle 'rotate' class to rotate the arrow
+        let content = this.nextElementSibling
+        
+        // content.classList.toggle('!tw-hidden')
+        if (content.style.maxHeight === '200px') {
+            content.style.maxHeight = '0px'
+            content.style.padding = '0px 18px'
+
         } else {
-            star.classList.remove('active')
+            content.style.maxHeight = '200px'
+            content.style.padding = '20px 18px'
         }
     })
-}
-
-function handleStarClicked(event){
-    const rating = event.currentTarget.getAttribute('data-value')
-
-    if (rating < 4){
-        reviewModal.updateModal("We are sorry, you are disappointed", 
-                            "Please let us know what we can improve.")
-        reviewModal.showModalInput()
-        reviewModal.updateButton("Submit")
-    }else{
-        reviewModal.updateModal("Thank you!", 
-                            `We are pleased to hear you like us. 
-                            Could you please rate us on Google maps?`)
-        reviewModal.hideModalInput()
-        reviewModal.updateButton("Open maps", "https://maps.app.goo.gl/")
-    }
-
-    reviewModal.show()
-
-}
-
-function hideActiveStar(){
-    stars.forEach(star => {
-        
-        star.classList.remove('active')
-    })
-}
-
-stars.forEach((star, i) => {
-    star.addEventListener('mouseover', handleStarHover)
-    star.addEventListener('click', handleStarClicked)
-   
 })
-    
-starContainer.addEventListener('mouseleave', hideActiveStar)
+
+
+
+// ------------- reveal section animations ---------------
+
+const sections = gsap.utils.toArray("section")
+
+sections.forEach((sec) => {
+
+    const revealUptimeline = gsap.timeline({paused: true, 
+                                            scrollTrigger: {
+                                                            trigger: sec,
+                                                            start: "10% 80%", // top of trigger hits the top of viewport
+                                                            end: "20% 90%",
+                                                            // markers: true,
+                                                            // scrub: 1,
+                                                        }})
+
+    revealUptimeline.to(sec.querySelectorAll(".reveal-up"), {
+        opacity: 1,
+        duration: 0.8,
+        y: "0%",
+        stagger: 0.2,
+    })
+
+
+})
